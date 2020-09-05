@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col v-for="i in items" v-bind:key="i">
+      <v-col v-for="(i, key) in items" v-bind:key="key">
         <Card
           :icon="i.icon"
           :title="i.title"
@@ -11,7 +11,7 @@
           :avatarColor="i.avatarColor"
           :name="i.name"
           :date="i.date"
-          :linkToProject="i.linkToProject"
+          :toProject="i.toProject"
         />
       </v-col>
     </v-row>
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Card from "../components/Card";
+import Card from "@/components/Card";
 export default {
   components: { Card },
   data() {
@@ -34,7 +34,7 @@ export default {
           avatarColor: "primary darken-2",
           name: "Vuetify",
           date: "04/09/2020",
-          linkToProject: "https://utn.isw.tp6.lorenzofabro.com",
+          toProject: { name: "ISW_TP6_Home" },
         },
       ],
     };

@@ -1,19 +1,14 @@
 <template>
-  <v-app style="font-family: ProximaNova !important">
-    <v-app-bar app>
-      <v-toolbar-title class="title">UTN PROJECTS</v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn icon href="https://lorenzofabro.com" target="_blank">
-        <v-icon>mdi-home</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main class="mt-5">
+  <v-app
+    style="font-family: ProximaNova !important;"
+    :style="{ background: $vuetify.theme.themes[theme].background }"
+  >
+    <AppBar />
+    <v-main>
       <v-scroll-y-transition mode="out-in">
         <router-view></router-view>
       </v-scroll-y-transition>
     </v-main>
-
     <Footer />
   </v-app>
 </template>
@@ -26,9 +21,14 @@
 </style>
 
 <script>
-import Footer from "./views/Footer";
+import AppBar from "@/components/AppBar";
+import Footer from "@/components/Footer";
 export default {
-  name: "App",
-  components: { Footer },
+  components: { AppBar, Footer },
+  computed: {
+    theme() {
+      return this.$vuetify.theme.dark ? "dark" : "light";
+    },
+  },
 };
 </script>

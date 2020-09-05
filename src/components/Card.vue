@@ -1,11 +1,5 @@
 <template>
-  <v-card
-    class="mx-auto"
-    :color="color"
-    max-width="400"
-    :href="linkToProject"
-    target="_blank"
-  >
+  <v-card class="mx-auto" :color="color" max-width="400" :to="toProject">
     <v-card-title>
       <v-icon large left>
         {{ icon }}
@@ -47,7 +41,7 @@ export default {
     "avatar",
     "date",
     "avatarColor",
-    "linkToProject",
+    "toProject",
   ],
 };
 </script>
