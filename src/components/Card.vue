@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" :color="color" max-width="400" :to="toProject">
+  <v-card min-width="275" :color="color" :to="toProject">
     <v-card-title>
       <v-icon large left>
         {{ icon }}

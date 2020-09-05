@@ -1,10 +1,17 @@
 <template>
   <v-app-bar app dark>
-    <v-toolbar-title class="title toolbarTitle" @click="goToHome()"
-      >UTN</v-toolbar-title
+    <v-btn icon @click="goBack()"><v-icon>mdi-chevron-left</v-icon></v-btn>
+    <v-toolbar-title
+      class="title toolbarTitle"
+      @click="goToHome()"
+      v-if="$vuetify.breakpoint.smAndUp"
+      >UTN 🎓</v-toolbar-title
     >
-    <v-spacer></v-spacer>
+    <v-spacer v-if="$vuetify.breakpoint.smAndUp"></v-spacer>
     <v-btn text @click="darkMode()">{{ themeText }}</v-btn>
+    <v-btn text href="https://lorenzofabro.com" target="_blank">
+      WEB 💻
+    </v-btn>
     <v-btn text @click="goToHome()">
       HOME 🏠
     </v-btn>
@@ -20,6 +27,10 @@
 <script>
 export default {
   methods: {
+    goBack() {
+      if (this.$route.path === "/") return;
+      this.$router.back();
+    },
     goToHome() {
       if (this.$route.path === "/") return;
       this.$router.push({ name: "Home" });

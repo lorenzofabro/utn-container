@@ -183,7 +183,7 @@
 <script>
 import Divider from "@/components/Divider";
 import swal from "sweetalert";
-import CreditCard from "@/views/ISW_TP6/CreditCard";
+import CreditCard from "@/views/ISW/TP6/CreditCard";
 export default {
   components: { Divider, CreditCard },
   data() {

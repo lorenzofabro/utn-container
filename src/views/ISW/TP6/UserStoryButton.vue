@@ -16,7 +16,7 @@
       <template v-slot:activator>
         <v-btn v-model="fab" color="blue darken-2" dark fab>
           <v-icon v-if="fab">mdi-close</v-icon>
-          <v-icon v-else>mdi-arrow-up</v-icon>
+          <v-icon v-else>mdi-chevron-up</v-icon>
         </v-btn>
       </template>
       <v-btn fab dark small color="yellow darken-3" @click="dialogInfo = true">
@@ -30,7 +30,7 @@
         v-if="actualRoute"
         @click="$router.go($router.currentRoute)"
       >
-        <v-icon>mdi-cart</v-icon>
+        <v-icon>mdi-reload</v-icon>
       </v-btn>
       <v-btn
         fab
