@@ -1,23 +1,7 @@
-# UTN
-
-## Project setup
-
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<h1 align="center">UTN CONTAINER 🎓</h1>
+<h3 align="center">Project with university projects made through the years 🤓</h3>
+<h3 align="center"><a href="https://utn.lorenzofabro.com/" target="_blank">Go to website!</a></h3>
+<p>👉 Made with Vue and Vuetify</p>
+<p>👉 Running on a small express server</p>
+<p>👉 To setup, just run `npm install`</p>
+<p>👉 To compile, just run `npm run serve`</p>
